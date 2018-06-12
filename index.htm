@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	<title> Artur Rego-Costa </title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css?family=Cabin|Roboto+Slab" rel="stylesheet">
+
+	<style>
+		:root {
+/*			--bg-color:#e5e7e9;
+			--header-footer-color:#273750;*/
+			--bg-color:#A0A0A0;
+			--header-footer-color:#222629;
+			--regular-font-color:#050505;
+			--special-font-color:#d5d5d5;
+		}
+
+		/*For quirky box model--------*/
+		/*From https://css-tricks.com/box-sizing/*/
+		html {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		*, *:before, *:after {
+			-webkit-box-sizing: inherit;
+			-moz-box-sizing: inherit;
+			box-sizing: inherit;
+		}
+		/*----------------------------*/
+
+		img {
+			width: auto;
+			max-width: 100%;
+			height: auto;
+			vertical-align: top;
+		}
+
+		html {
+			width: 100%;
+			height: 100%;
+			/*margin: 0px;*/
+			/*padding: 0px;*/
+		}
+
+		body {
+			width: 100%;
+			min-height: 100%;
+			margin: 0px;
+			/*padding: 0px;*/
+			background-color:var(--bg-color);
+			position:absolute;
+		}
+
+		#container {
+			min-height:35em;
+			height:100%;
+			width:100%;
+			top:0;
+			left:0;
+			position:absolute;
+		}
+
+		#content {
+			position:absolute;
+			padding:5em 1.2em 4em 1.2em;
+			height:100%;
+		}
+
+		#header-bar {
+			position:fixed;
+			top:0px;
+			right:0px;
+			left:0px;
+			height:3.8em;
+			z-index: 100;
+			background-color:var(--header-footer-color);
+			font-family:'Cabin', sans-serif;
+		}
+
+		#header-text-box {
+			position:absolute;
+			bottom:0.5em;
+			left:1em;
+			font-size: 155%;
+			color:var(--special-font-color);
+			z-index: 100;
+			font-family:'Cabin', sans-serif;
+		}
+
+		#header-drape {
+			position:absolute;
+			right:2em;
+			height:100%;
+		}
+
+		#footer-bar {
+			position:absolute;
+			right:0px;
+			left:0px;
+			bottom:0px;
+			height:2.2em;
+			z-index: 100;
+			background-color:var(--header-footer-color);
+			font-family:'Cabin', sans-serif;
+		}
+
+		#footer-text-box {
+			position:absolute;
+			bottom:0.85em;
+			left:1.5em;
+			font-size: 80%;
+			color:var(--special-font-color);
+			z-index: 100;
+			font-family:'Cabin', sans-serif;
+		}
+
+		#about {
+			width:100%;
+			height: 13em;
+		}
+
+		#about-photo {
+			width:25%;
+			height:100%;
+			float:left;
+			text-align: center
+			overflow: auto;
+		}
+
+		#about-spacer {
+			width:2.5%;
+			height:100%;
+			float:left;
+		}
+
+		#about-blurb {
+			width:72.5%;
+			height: 100%;
+			float:left;
+		}
+
+		.base {
+			margin:0px 0px 0px 0px;
+			padding:0px 0px 1em 0em;
+			font-family: 'Roboto Slab', serif;
+			color:var(--regular-font-color);
+		}
+
+		a:link {
+			color: #34495E;
+		}
+
+		a:visited {
+			color: #AE5C01;
+		}
+
+		@media screen and (max-width:400px) {
+			#content {
+				padding:4.6em 0.8em 3em 0.8em;
+			}
+
+			#header-drape {
+				right:1em;
+			}
+
+			#about-blurb {
+				float:none;
+				width:100%;
+			}
+
+			#about-spacer {
+				float:none;
+				width:0;
+				height:1em;
+			}
+
+			#about-photo {
+				float:none;
+				width: 100%;
+				padding:0% 15% 0% 15%;
+			}
+		}
+	</style>
+
+</head>
+
+<body>
+<div id="container">
+	<div id="header-bar">
+		<div id="header-text-box">
+			Artur Rego-Costa
+		</div>
+		<div id="header-drape">
+			<div style="float:right; 
+			            width:1.2em;
+			            height:40%;
+			            z-index: 110;
+			            background-color: #ffdf00;">
+			</div>
+			<div style="float:right;
+			            width:1.2em;
+			            height:40%;
+			            z-index: 101;
+			            background-color: #009c3b;">
+			</div>
+		</div>
+	</div>
+	<div id="content">
+		<div id="about">
+
+			<div id="about-photo">
+				<img style="max-height:100%"
+					alt="profile pic"
+					src="resources/profile_round_1600px.png"
+					srcset="resources/profile_round_800px.png 800w, 
+					resources/profile_round_400px.png 400w, 
+					resources/profile_round_200px.png 200w, 
+					resources/profile_round_50px.png 50w">
+			</div>
+
+			<div id="about-spacer">
+				
+			</div>
+
+			<div id ="about-blurb">
+				<p class="base">
+					Interested in all things evolutionary biology.
+					I am currently a tech in 
+					<a href="https://desailab.oeb.harvard.edu/"
+					target="_blank">Michael Desai</a>'s group
+					at Harvard, where I will start the PhD journey
+					next September in the OEB program.
+				</p>
+
+				<p class="base"><a href="cv.pdf" target="_blank">
+					CV
+				</a> <br>
+				<a href="https://scholar.google.ca/citations?user=AsziVyMAAAAJ&hl=en" target="_blank">
+					Google Citations
+				</a><br>
+				</p>
+				<p class="base">
+				rego-costa@g.harvard.edu
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer-bar">
+		<div id="footer-text-box">
+			Designed by moi. All rights reserved &copy;
+		</div>
+	</div>
+</div>
+</body>
+</html>
